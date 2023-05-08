@@ -1,4 +1,4 @@
-package com.example.micro3;
+package com.example.micro4;
 
 import java.util.Map;
 
@@ -25,19 +25,19 @@ public class Controller {
 		this.restTemplate = builder.build();
 	}
 	
-	@GetMapping(path = "/micro-3")
+	@GetMapping(path = "/micro-4")
     public String getPrueba(@RequestHeader Map<String, String> headers) {
         headers.forEach((key, value) -> {
         	LOGGER.info(String.format("Header '%s' = %s", key, value));
         });
-        LOGGER.info("Inicio test micro-3");
-        
+        LOGGER.info("Inicio test micro-4");
+        /*
         String resourceUrl
-          = "http://localhost:8083/micro-4";
+          = "http://localhost:8082/micro-3";
         ResponseEntity<String> response
           = restTemplate.getForEntity(resourceUrl, String.class);
-        LOGGER.info("Respuesta micro-4: " + response.getBody());
-        LOGGER.info("Fin test micro-3");
-        return "Test micro-3";
+        LOGGER.info("Respuesta micro-3: " + response.getBody());*/
+        LOGGER.info("Fin test micro-4");
+        return "Test micro-4";
     }
 }
